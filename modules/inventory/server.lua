@@ -259,7 +259,7 @@ end
 ---@param container table
 exports("EnsureContainerExist", function(container)
 	if container?.metadata?.container then
-		if Inventories[inv] == nil then
+		if Inventories[container.metadata.container] == nil then
 			Inventory.Create(container.metadata.container, container.label, "container", container.metadata.size[1], 0, container.metadata.size[2], false)
 		end
 	end
